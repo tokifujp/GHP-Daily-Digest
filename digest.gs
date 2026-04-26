@@ -230,7 +230,14 @@ function generateDigest(apiKey, ghpData, slackData, diff, projectName, channelLa
   - 要アクションがあれば担当者と対象を明記
 - 全体 30 行以内
 - mrkdwn 記法: *bold*, _italic_, <URL|text>
-- 日本語で出力`;
+- 日本語で出力
+
+## 記法ルール（厳守）
+- Markdown は一切使わない（##、**、---、コードブロック \`\`\` は禁止）
+- 太字は Slack mrkdwn の *text* を使う（前後にスペースが必要）
+- リンクは <URL|text> 形式
+- セクション区切りは空行のみ
+- 箇条書きは • を使う\``;
 
   const userContent = [
     warnings.length > 0 ? warnings.join("\n") : "",
